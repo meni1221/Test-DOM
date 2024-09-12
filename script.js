@@ -24,9 +24,46 @@ newItem.textContent = inputMissionTime;
 newItem.textContent = inputStatus;
 
 //find the ul elemnt
-const ulElement = document.querySelector(".ulElem");
+const trElement = document.querySelector(".trElement");
+
+    //add the new elemnt to the tr
+    trElement.append(newItem);
+
 ;};
 
 btnAdd.addEventListener("click",add);
 
+
+
+//saveTasks
+const saveTasks = (arr) => {
+    localStorage.setItem("tasks", JSON.stringify(arr));
+  };
+  saveTasks([]);
+  
+  //loadTasks
+  const loadTasks = () => {
+    return JSON.parse(localStorage.getItem("tasks"));
+  };
+  console.log(loadTasks());
+  
+  //addTask
+  const addTask = (task) => {
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    tasks.push(task);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  };
+  
+  addTask(37);
+  console.log(loadTasks());
+  
+  //removeTask
+  const removeTask = (task) => {
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    const newTasks = tasks.filter((t) => t !== task);
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
+  };
+  
+  removeTask(4);
+  console.log(loadTasks());
 
