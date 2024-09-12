@@ -1,24 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <nav class="nav"><h2>BATTALION FORCE MANAGEMENT</h2></nav>
+    <nav class="nav">
+        <H3>BATTALION FORCE MANAGEMENT</H3>
+    </nav>
     <div class="w">
-    <div class="soldierDetails">
-        <input class="name" placeholder="Full Name"></input>
-        <input class="rank" placeholder="Rank"></input>
-        <input class="position" placeholder="Position"></input>
-        <input class="platoon" placeholder="Platoon"></input>
-        <input class="missionTime" placeholder="Mission Time (seconds)"></input>
-        i dont 
-        <input class="add" type="button" value="Add personnel">
+        <div class="soldierDetails">
+            <input class="name" placeholder="Full Name"></input>
+            <input class="rank" placeholder="Rank"></input>
+            <input class="position" placeholder="Position"></input>
+            <input class="platoon" placeholder="Platoon"></input>
+            <input class="missionTime" placeholder="Mission Time (seconds)"></input>
+            <select class="select">
+                <option value="activ">Activ</option>
+                <option value="reserve">Reserve</option>
+                <option value="retired">Retired</option>
+            </select>
+            <input class="add" type="button" value="Add personnel">
+        </div>
     </div>
-</div>
+    <Nav class="nav">
+        <H3>FORCES OVERVIEW</H3>
+    </Nav>
+    <div class="table">
+    <Table>
+        <tr>
+        <th class="tableTop">
+        <input class="add" type="button" value="Full Name">
+        </th>
+        <th class="tableTop">RANK</th>
+        <th class="tableTop">POSITION</th>
+        <th class="tableTop">PLATOON</th>
+        <th class="tableTop">STATUS</th>
+        <th class="tableTop">ACTIONS</th>
+        </tr>
+        <tr>
+            <td class="cell">Ariel Ohana</td>
+            <td class="cell">Sergeant First Class</td>
+            <td class="cell">Combat Solder</td>
+            <td class="cell">Pluga B</td>
+            <td class="cell">Activ</td>
+            <td class="cell">        
+                <input class="add" type="button" value="Remove">
+                <input class="add" type="button" value="Mission">
+                <input class="add" type="button" value="Edit">
+            </td>
+        </tr>
+        <tr></tr>
+            <td class="cell">Meni Levi</td>
+            <td class="cell">Sergeant First Class</td>
+            <td class="cell">Combat Solder</td>
+            <td class="cell">Pluga B</td>
+            <td class="cell">Activ</td>
+            <td class="cell">        
+                <input class="add" type="button" value="Remove">
+                <input class="add" type="button" value="Mission">
+                <input class="add" type="button" value="Edit">
+            </td>
+        </tr>
+        <tr></tr>
+            <td class="cell">Miki Levi</td>
+            <td class="cell">Sergeant First Class</td>
+            <td class="cell">Combat Solder</td>
+            <td class="cell">Pluga B</td>
+            <td class="cell">Activ</td>
+            <td class="cell">        
+                <input class="add" type="button" value="Remove">
+                <input class="add" type="button" value="Mission">
+                <input class="add" type="button" value="Edit">
+            </td>
+        </tr>
+    </Table>
+    </div>
+    <nav class="nav">
+        <H3>EDIT PERSONNEL</H3>
+    </nav>
 </body>
+
 </html>
